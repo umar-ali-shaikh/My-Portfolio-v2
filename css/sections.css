@@ -3,7 +3,7 @@
     height: 100vh;
     max-height: 650px;
     position: relative;
-    background-image: url(../image/herosection.png);
+    background-image: url(../assets/images/herosection.png);
     background-position: 85%;
     background-size: cover;
     background-repeat: no-repeat;
