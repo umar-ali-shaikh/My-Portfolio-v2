@@ -160,13 +160,18 @@ function initResume() {
     const gap = 50;
     const extraGap = 100;
 
-    // FIX: always use stable height
-    const safeHeight = window.innerHeight;
+    const safeHeight = window.innerHeight; // FIXED
 
     ScrollTrigger.getAll().forEach(st => st.kill());
     gsap.set(cards, { clearProps: "all" });
 
-    // Initial positions
+    // FIX: wrapper ko height set karo
+    wrapper.style.height =
+        (cards.length * cardHeight) + 
+        ((cards.length - 1) * gap) + 
+        extraGap + "px";
+
+    // Set initial card positions
     cards.forEach((card, i) => {
         gsap.set(card, {
             position: "absolute",
@@ -178,10 +183,9 @@ function initResume() {
     });
 
     const endValue =
-        (cards.length * cardHeight) +
-        ((cards.length - 1) * gap) +
-        extraGap -
-        safeHeight;
+        (cards.length * cardHeight) + 
+        ((cards.length - 1) * gap) + 
+        extraGap - safeHeight;
 
     let tl = gsap.timeline({
         scrollTrigger: {
@@ -190,16 +194,13 @@ function initResume() {
             end: "+=" + endValue,
             scrub: 1,
             pin: true,
-
-            /* THE FIX for Android Chrome */
-            pinType: "transform",
-
+            pinType: "transform",  // SUPER IMPORTANT FIX
             invalidateOnRefresh: true,
-            anticipatePin: 1    // PREVENTS JUMP
+            anticipatePin: 1
         }
     });
 
-    // Scroll transitions between cards
+    // Animate cards
     cards.forEach((card, i) => {
         if (i === 0) return;
 
@@ -219,9 +220,5 @@ function initResume() {
     ScrollTrigger.refresh();
 }
 
-// INIT
 initResume();
-window.addEventListener("resize", () => {
-    setTimeout(initResume, 100);
-});
-    
+window.addEventListener("resize", () => setTimeout(initResume, 100));
