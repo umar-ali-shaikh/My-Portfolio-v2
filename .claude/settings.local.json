@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nMerge branch ''main'' - Fixed mobile resume section\n\n- Resolved conflict in script2.js\n- Kept local version with mobile detection and fixes\n- Mobile (≤576px): Simple vertical stack, no animation\n- Desktop/Tablet (>576px): Maintains scroll animation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(node:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:webfolio-nextjs.vercel.app)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

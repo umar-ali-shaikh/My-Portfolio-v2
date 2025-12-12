@@ -488,3 +488,22 @@
     justify-content: center;
     align-items: center;
 }
+
+/* Custom Scrollbar for Carousel Description */
+.carousel .list .item .content .des::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carousel .list .item .content .des::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.carousel .list .item .content .des::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+.carousel .list .item .content .des::-webkit-scrollbar-thumb:hover {
+    background: #ff6b47;
+}
