@@ -21,34 +21,87 @@ if (window.gsap && window.ScrollTrigger && isMobile()) {
 
 
 /* =========================
-   CUSTOM MOUSE DOT + ACTIVE SECTION
+   CUSTOM MOUSE DOT 
 ========================= */
 document.addEventListener("DOMContentLoaded", () => {
 
-    const sections = document.querySelectorAll(".sectionaddactive");
-    const portfolioDot = document.querySelector(".portfolio-dot");
+    const dot = document.querySelector(".portfolio-dot");
+    if (!dot) return;
 
-    if (portfolioDot) {
-        document.addEventListener("mousemove", e => {
-            portfolioDot.style.transform =
-                `translate(${e.clientX}px, ${e.clientY}px)`;
-        });
+    const OFFSET = -2;
+
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+
+    dot.style.position = "fixed";
+    dot.style.pointerEvents = "none";
+
+    /* ===============================
+       MOUSE MOVE
+    =============================== */
+    document.addEventListener("mousemove", (e) => {
+        targetX = e.clientX - OFFSET;
+        targetY = e.clientY;
+    });
+
+    function animateDot() {
+        currentX += (targetX - currentX) * 0.15;
+        currentY += (targetY - currentY) * 0.15;
+
+        dot.style.left = currentX + "px";
+        dot.style.top = currentY + "px";
+
+        requestAnimationFrame(animateDot);
     }
+    animateDot();
 
-    function checkSection() {
-        const winH = window.innerHeight;
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            section.classList.toggle(
-                "active",
-                rect.top < winH - 150 && rect.bottom > 0
-            );
-        });
-    }
+    /* ===============================
+       HOVER ON a, button, .portfolio-hover
+    =============================== */
+    document.addEventListener("mouseenter", (e) => {
+        if (e.target.closest("a, button, .portfolio-hover")) {
+            dot.classList.add("portfolio-dot-active");
+        }
+    }, true);
 
-    window.addEventListener("scroll", checkSection, { passive: true });
-    checkSection();
+    document.addEventListener("mouseleave", (e) => {
+        if (e.target.closest("a, button, .portfolio-hover")) {
+            dot.classList.remove("portfolio-dot-active");
+        }
+    }, true);
+
 });
+
+
+// Section active
+const sections = document.querySelectorAll(".sectionaddactive");
+
+function checkSection() {
+    const triggerPoint = window.innerHeight - 150;
+
+    sections.forEach(section => {
+        const { top, bottom } = section.getBoundingClientRect();
+        section.classList.toggle("active", top < triggerPoint && bottom > 0);
+    });
+}
+
+// Run on page load
+checkSection();
+
+// Run on scroll (optimized)
+let ticking = false;
+window.addEventListener("scroll", () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            checkSection();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+
+
 
 /* =========================
    LOADER + WAVE

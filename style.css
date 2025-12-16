@@ -131,12 +131,19 @@ img {
     background-color: var(--text1-color);
     width: 10px;
     height: 10px;
+    left: 0;
+    top: 0;
+    pointer-events: none;
     border-radius: 50px;
     z-index: 1111111111;
     position: fixed;
+    transition: transform 0.3s, opacity 0.4s, -webkit-transform 0.3s;
 }
 
-
+.portfolio-dot-active {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 0.1;
+}
 
 
 /* ==============================
@@ -1115,7 +1122,7 @@ img {
 .scroll-section {
     position: relative;
     padding: 0 !important;
-    margin: 0 auto !important;
+    margin: 0 0 !important;
     right: 0;
 }
 
@@ -1623,8 +1630,15 @@ img {
 
 .footer-section-content-text-hlp h4 {
     border-right: 4px solid var(--text1-color);
-    padding-right: 20px;
+    padding-right: 15px;
+    margin-right: 10px;
     font-size: 24px;
+    margin-bottom: 0;
+}
+
+.footer-section-content-text-hlp {
+    align-items: center;
+    display: flex;
 }
 
 .footer-social-contact-hlp span svg {
@@ -1633,6 +1647,7 @@ img {
 
 .footer-social ul {
     justify-content: center;
+    margin: 0;
 }
 
 .footer-section .circle-shape::before {
@@ -1728,6 +1743,7 @@ img {
     justify-content: center;
     align-items: center;
 }
+
 
 
 
