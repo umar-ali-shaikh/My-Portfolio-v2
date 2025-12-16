@@ -681,6 +681,56 @@ img {
     object-fit: contain;
 }
 
+/* ==============================
+   ABOUT US TRANSITIONS
+============================== */
+
+/* initial hidden state */
+.aboutus-section .hero-section-img,
+.aboutus-section .hero-section-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+/* icons subtle motion */
+.aboutus-section .hero-section-img-hlp-icon {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* when section becomes active */
+.aboutus-section.active .hero-section-img,
+.aboutus-section.active .hero-section-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* icons appear one by one */
+.aboutus-section.active .hero-section-img-hlp-icon1 {
+    transition-delay: 0.3s;
+    opacity: 1;
+    transform: scale(1) rotate(10deg);
+}
+
+.aboutus-section.active .hero-section-img-hlp-icon2 {
+    transition-delay: 0.5s;
+    opacity: 1;
+    transform: scale(1) rotate(15deg);
+}
+
+.aboutus-section.active .hero-section-img-hlp-icon3 {
+    transition-delay: 0.7s;
+    opacity: 1;
+    transform: scale(1) rotate(20deg);
+}
+
+.aboutus-section.active .hero-section-img-hlp-icon4 {
+    transition-delay: 0.9s;
+    opacity: 1;
+    transform: scale(1) rotate(-10deg);
+}
 
 
 
@@ -1630,8 +1680,8 @@ img {
 
 .footer-section-content-text-hlp h4 {
     border-right: 4px solid var(--text1-color);
-    padding-right: 15px;
-    margin-right: 10px;
+    padding-right: 20px;
+    margin-right: 20px;
     font-size: 24px;
     margin-bottom: 0;
 }
@@ -1647,6 +1697,10 @@ img {
 
 .footer-social ul {
     justify-content: center;
+    margin: 0;
+}
+
+.footer-section .footer-social .social-media {
     margin: 0;
 }
 

@@ -538,3 +538,28 @@ window.addEventListener("beforeunload", () => scrollTo(0, 0));
 
 document.querySelector('.footer-top-arrow .footer-top-arrow-hlp')
     ?.addEventListener('click', () => scrollTo({ top: 0, behavior: "smooth" }));
+
+
+
+// transition
+// about us
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const aboutSection = document.querySelector(".aboutus-section");
+    if (!aboutSection) return;
+
+    function revealAbout() {
+        const rect = aboutSection.getBoundingClientRect();
+        const triggerPoint = window.innerHeight - 150;
+
+        if (rect.top <= triggerPoint) {
+            aboutSection.classList.add("active");
+            window.removeEventListener("scroll", revealAbout); // 🔥 ek hi baar
+        }
+    }
+
+    window.addEventListener("scroll", revealAbout, { passive: true });
+    revealAbout(); // page load pe check
+});
+
