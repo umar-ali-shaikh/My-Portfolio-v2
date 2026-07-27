@@ -4,26 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umar Ali Shaikh Portfolio</title>
+    <title>Umar Ali Shaikh | Full Stack MERN & AI Developer</title>
+    <meta name="description"
+        content="Umar Ali Shaikh is a Full Stack MERN & AI Developer with 2+ years of experience building scalable web applications with MongoDB, Express.js, React.js, Node.js, RESTful APIs, and Generative AI integrations.">
+    <meta name="keywords"
+        content="Umar Ali Shaikh, Full Stack Developer, MERN Stack Developer, React.js Developer, Node.js Developer, JavaScript Developer, AI Developer, Generative AI, RAG, Web Developer Mumbai, Frontend Developer, Backend Developer, WordPress Developer">
+    <meta name="author" content="Umar Ali Shaikh">
+    <link rel="canonical" href="https://umaralishaikhv2.vercel.app/">
+    <link rel="icon" type="image/png" href="image/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://umaralishaikhv2.vercel.app/">
+    <meta property="og:title" content="Umar Ali Shaikh | Full Stack MERN & AI Developer">
+    <meta property="og:description"
+        content="Full Stack MERN & AI Developer with 2+ years of experience building scalable web applications with MongoDB, Express.js, React.js, Node.js, and Generative AI integrations.">
+    <meta property="og:image" content="https://umaralishaikhv2.vercel.app/image/Aboutme.jpeg">
+    <meta property="og:site_name" content="Umar Ali Shaikh Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Umar Ali Shaikh | Full Stack MERN & AI Developer">
+    <meta name="twitter:description"
+        content="Full Stack MERN & AI Developer with 2+ years of experience building scalable web applications with MongoDB, Express.js, React.js, Node.js, and Generative AI integrations.">
+    <meta name="twitter:image" content="https://umaralishaikhv2.vercel.app/image/Aboutme.jpeg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Umar Ali Shaikh",
+        "url": "https://umaralishaikhv2.vercel.app/",
+        "image": "https://umaralishaikhv2.vercel.app/image/Aboutme.jpeg",
+        "jobTitle": "Full Stack MERN & AI Developer",
+        "email": "mailto:umarali4430@gmail.com",
+        "telephone": "+91-9833075638",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kurla, Mumbai",
+            "addressRegion": "Maharashtra",
+            "postalCode": "400072",
+            "addressCountry": "IN"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Pittie Group"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/umar-ali-shaikh-53172a281/",
+            "https://github.com/umar-ali-shaikh"
+        ],
+        "knowsAbout": [
+            "MongoDB", "Express.js", "React.js", "Node.js", "JavaScript",
+            "REST API Development", "JWT Authentication", "Generative AI",
+            "RAG", "Prompt Engineering", "n8n Workflow Automation", "WordPress"
+        ]
+    }
+    </script>
+
+    <!-- performance: connection warmup for third-party origins -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
     <!-- boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- swipper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css">
-
     <!-- css -->
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -53,7 +114,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Umar Ali Shaikh Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    data-bs-target="#navbarSupportedContentMobile" aria-controls="navbarSupportedContentMobile"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -61,7 +122,7 @@
                     <div class="header-btn header-btn-pc">
                         <button type="button" class="btn btn-primary">Let's Contact</button>
                     </div>
-                    <div class="navbar-collapse-pc collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-collapse-pc collapse navbar-collapse">
                         <ul class="navbar-nav ">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -75,12 +136,12 @@
                                     Skills
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#"></a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Frontend Development</a></li>
+                                    <li><a class="dropdown-item" href="#">Backend Development</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">AI & Automation</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -93,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="navbar-collapse-mobile collapse navbar-collapse-hlp" id="navbarSupportedContent">
+                <div class="navbar-collapse-mobile collapse navbar-collapse-hlp" id="navbarSupportedContentMobile">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -107,12 +168,12 @@
                                 Skills
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"></a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Frontend Development</a></li>
+                                <li><a class="dropdown-item" href="#">Backend Development</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">AI & Automation</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -146,10 +207,10 @@
                     <h1>I'm Umar Ali
                         <span class="portfolio-redcolor">Shaikh</span>
                     </h1>
-                    <h2>I am a web & app developer</h2>
-                    <p>From day one to launch day, I engineer experiences that look good, work smart, and
-                        feel
-                        effortless — chasing perfection with calm precision and fearless creativity.</p>
+                    <h2>I am a Full Stack MERN & AI Developer</h2>
+                    <p>From day one to launch day, I build scalable web applications with MongoDB, Express.js,
+                        React.js, and Node.js — layering in secure authentication, RESTful APIs, and
+                        Generative AI features that turn ideas into production-ready products.</p>
 
                     <div class="hero-section-content-btn">
                         <button type="button" class="btn btn-primary">Contact Me</button>
@@ -184,362 +245,362 @@
             <div class="animated-skills">
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web developer</span>
+                        <p class="marquee-text">
+                            <span>Full Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Application developer</span>
+                        <p class="marquee-text">
+                            <span>MERN Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>UI/UX Desighner</span>
+                        <p class="marquee-text">
+                            <span>React.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Wordpress Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web Designer</span>
+                        <p class="marquee-text">
+                            <span>Node.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>ReactJS Developer</span>
+                        <p class="marquee-text">
+                            <span>REST API Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Frontend Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Figma Designer</span>
+                        <p class="marquee-text">
+                            <span>Generative AI Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper ">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>GSAP / Animation Expert</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web developer</span>
+                        <p class="marquee-text">
+                            <span>Full Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Application developer</span>
+                        <p class="marquee-text">
+                            <span>MERN Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>UI/UX Desighner</span>
+                        <p class="marquee-text">
+                            <span>React.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Wordpress Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web Designer</span>
+                        <p class="marquee-text">
+                            <span>Node.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>ReactJS Developer</span>
+                        <p class="marquee-text">
+                            <span>REST API Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Frontend Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Figma Designer</span>
+                        <p class="marquee-text">
+                            <span>Generative AI Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper ">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>GSAP / Animation Expert</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web developer</span>
+                        <p class="marquee-text">
+                            <span>Full Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Application developer</span>
+                        <p class="marquee-text">
+                            <span>MERN Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>UI/UX Desighner</span>
+                        <p class="marquee-text">
+                            <span>React.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Wordpress Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web Designer</span>
+                        <p class="marquee-text">
+                            <span>Node.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>ReactJS Developer</span>
+                        <p class="marquee-text">
+                            <span>REST API Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Frontend Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Figma Designer</span>
+                        <p class="marquee-text">
+                            <span>Generative AI Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper ">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>GSAP / Animation Expert</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web developer</span>
+                        <p class="marquee-text">
+                            <span>Full Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Application developer</span>
+                        <p class="marquee-text">
+                            <span>MERN Stack Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>UI/UX Desighner</span>
+                        <p class="marquee-text">
+                            <span>React.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Wordpress Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Web Designer</span>
+                        <p class="marquee-text">
+                            <span>Node.js Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>ReactJS Developer</span>
+                        <p class="marquee-text">
+                            <span>REST API Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Frontend Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
-                            <span>Figma Designer</span>
+                        <p class="marquee-text">
+                            <span>Generative AI Developer</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 <div class="animated-skills-wrapper ">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>GSAP / Animation Expert</span>
                             <span>
-                                <img src="image/star.png" alt="portfolio star">
+                                <img src="image/star.png" alt="portfolio star" loading="lazy">
                             </span>
-                        </h3>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -555,19 +616,19 @@
                 <div class="hero-section-img col-lg-5">
 
                     <div class="hero-section-img-hlp hero-section-img-hlp-icon-1">
-                        <img src="./image/Aboutme.jpeg" alt="Umar image 2">
+                        <img src="./image/Aboutme.jpeg" alt="Umar Ali Shaikh portrait" loading="lazy">
                     </div>
                     <div class="hero-section-img-hlp hero-section-img-hlp-icon hero-section-img-hlp-icon1">
-                        <img src="./image/icon1.png" alt="Figma">
+                        <img src="./image/icon1.png" alt="Figma" loading="lazy">
                     </div>
                     <div class="hero-section-img-hlp hero-section-img-hlp-icon hero-section-img-hlp-icon2">
-                        <img src="./image/icon2.png" alt="Git & Github">
+                        <img src="./image/icon2.png" alt="Git & Github" loading="lazy">
                     </div>
                     <div class="hero-section-img-hlp hero-section-img-hlp-icon hero-section-img-hlp-icon3">
-                        <img src="./image/react-js-icon.svg" alt="React JS">
+                        <img src="./image/react-js-icon.svg" alt="React JS" loading="lazy">
                     </div>
                     <div class="hero-section-img-hlp hero-section-img-hlp-icon hero-section-img-hlp-icon4">
-                        <img src="./image/wordpress.png" alt="Umar image 2">
+                        <img src="./image/wordpress.png" alt="WordPress icon" loading="lazy">
                     </div>
                 </div>
 
@@ -575,36 +636,33 @@
                     <h3 class="hero-section-content-hello d-flex portfolio-redcolor portfolio-size">
                         About Me
                     </h3>
-                    <h2 class="section-mainhd">Creative <span class="portfolio-redcolor">Web & Application
-                        </span>Developer | <span class="portfolio-redcolor">UI/UX</span> Designer</h2>
+                    <h2 class="section-mainhd">Full Stack <span class="portfolio-redcolor">MERN & AI
+                        </span>Developer | <span class="portfolio-redcolor">React.js</span> & Node.js</h2>
                     <p>
-                        I’m a passionate web and application developer with a creative edge in UI/UX design.
-                        I love transforming ideas into interactive, user-friendly digital experiences that
-                        are both
-                        visually appealing and functional.
-                        My work focuses on building responsive websites and applications using
-                        <strong>HTML</strong>,
-                        <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Bootstrap</strong>,
-                        <strong>Swiper.js</strong>, <strong>GSAP</strong>, <strong>React.js</strong>,
-                        <strong>WordPress</strong>, and <strong>Figma</strong>.
+                        I'm a Full Stack MERN & AI Developer with 2+ years of experience building scalable
+                        web applications using <strong>MongoDB</strong>, <strong>Express.js</strong>,
+                        <strong>React.js</strong>, and <strong>Node.js</strong>. My work spans secure
+                        authentication, RESTful API development, and cloud deployment, and increasingly
+                        AI-powered features built with <strong>Generative AI</strong>, <strong>RAG</strong>,
+                        <strong>Pinecone</strong>, and <strong>n8n</strong> workflow automation.
                     </p>
                     <p>
-                        With a strong foundation in front-end development and UI/UX design, I aim to deliver
-                        clean code,
-                        smooth animations, and engaging interfaces that enhance user experience.
-                        Every project I take on is an opportunity to innovate, bring unique ideas to life,
-                        and push
-                        creative boundaries.
+                        Currently a Junior Web Developer at Pittie Group, I've delivered 8+ responsive
+                        production websites, optimized SEO and performance to cut page load time by 40% and
+                        lift organic traffic by 30%, and shipped 10+ pixel-perfect UI implementations from
+                        Figma. I'm equally comfortable in the frontend — <strong>HTML5</strong>,
+                        <strong>CSS3</strong>, <strong>Tailwind CSS</strong>, <strong>Bootstrap</strong>,
+                        <strong>GSAP</strong> — as I am designing the backend that powers it.
                     </p>
                     <p>
-                        My mission is simple — to design and build websites and applications that not only
-                        look stunning
-                        but also tell a story, connect with users, and help brands stand out online.
+                        I'm passionate about building secure, high-performance, user-centric products, and
+                        I approach every project the same way: understand the problem first, then engineer
+                        a solution that's clean, scalable, and built to last.
                     </p>
                     <div class="hero-section-content-btn">
                         <button type="button" class="btn btn-primary">Contact Me</button>
 
-                        <img src="image/arrow-down-big.png" alt="">
+                        <img src="image/arrow-down-big.png" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -617,7 +675,7 @@
 
         <div class="my-project-content">
             <h2 class="section-mainhd">
-                My Portfolio
+                Featured Projects
             </h2>
         </div>
 
@@ -627,24 +685,22 @@
             <!-- list item -->
             <div class="list">
 
-                <!-- netflix clone -->
+                <!-- HirePilot -->
                 <div class="item">
-                    <img src="image/Netflixclone.png">
+                    <img src="image/hire-pilot.webp" loading="lazy">
                     <div class="content">
                         <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Netflix Clone</div>
-                        <div class="topic">OTT Platform</div>
+                        <div class="title">HirePilot</div>
+                        <div class="topic">MERN + Generative AI</div>
                         <div class="des">
-                            The Netflix Clone is a custom-built OTT interface designed to replicate the modern,
-                            cinematic experience of Netflix. This project showcases my skills in creating dynamic
-                            sliders, smooth animations, responsive layouts, and a user-friendly interface. It includes
-                            category-wise browsing, clean UI components, and interactive elements that enhance the
-                            overall viewing experience. Built with attention to detail, this clone demonstrates my
-                            ability to design and develop real-world streaming platforms.
+                            AI-powered interview preparation platform built on the MERN stack. Users upload a
+                            resume and job description to generate tailored interview questions, then receive
+                            AI-driven feedback and improvement suggestions. Built with JWT authentication and
+                            token blacklisting, RESTful APIs, and a scalable MongoDB architecture.
                         </div>
                         <div class="buttons">
                             <button>
-                                <a href="">
+                                <a href="https://hire-pilot-eight.vercel.app/" target="_blank" rel="noopener">
                                     SEE MORE
                                 </a>
                             </button>
@@ -652,27 +708,69 @@
                     </div>
                 </div>
 
-                <!-- GTA 6 Game -->
+                <!-- Smart Restaurant Automation System -->
                 <div class="item">
-                    <img src="image/gta6.png">
+                    <img src="image/smart-restaurant.webp" loading="lazy">
                     <div class="content">
                         <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">GTA 6 Clone</div>
-                        <div class="topic">Game Platform</div>
+                        <div class="title">Smart Restaurant Automation System</div>
+                        <div class="topic">MERN Full Stack</div>
                         <div class="des">
-                            The GTA 6 Clone is a high-quality game interface concept inspired by the upcoming
-                            Grand Theft Auto VI. This project focuses on recreating the cinematic UI, bold
-                            visuals, and immersive experience seen in modern AAA game platforms. It includes
-                            smooth animations, interactive menu screens, responsive layouts, and dynamic
-                            transitions that mimic the official game style. This clone highlights my ability
-                            to design realistic game UIs, create polished frontend interactions, and develop
-                            visually engaging digital experiences.
+                            A full-stack restaurant automation platform covering the complete dine-in
+                            workflow: QR-based digital menu, cart and order placement, a live kitchen
+                            dashboard with real-time order tracking, billing, and an admin panel for menu and
+                            analytics management. Built end-to-end with MongoDB, Express.js, React.js, and
+                            Node.js.
                         </div>
                         <div class="buttons">
                             <button>
-                                <a href="">
+                                <a href="https://smart-restaurant-automation-system.vercel.app" target="_blank" rel="noopener">
                                     SEE MORE
                                 </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pittie Consumer V2 -->
+                <div class="item">
+                    <img src="image/Pittieconsumerv2.png" loading="lazy">
+                    <div class="content">
+                        <div class="author">Umar Ali Shaikh</div>
+                        <div class="title">Pittie Consumer V2</div>
+                        <div class="topic">Pittie Group</div>
+                        <div class="des">
+                            Corporate website rebuild for the Pittie Group, showcasing their FMCG product
+                            portfolio across multiple brands. Rebuilt the navigation, product display, and
+                            content structure for a cleaner, faster experience, and optimized SEO and load
+                            performance as part of ongoing work with the Pittie Group's digital team.
+                        </div>
+                        <div class="buttons">
+                            <button>
+                                <a href="https://pittieconsumer.com" target="_blank" rel="noopener">
+                                    SEE MORE
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pittie Logistics -->
+                <div class="item">
+                    <img src="image/Pittielogistics.png" loading="lazy">
+                    <div class="content">
+                        <div class="author">Umar Ali Shaikh</div>
+                        <div class="title">Pittie Logistics</div>
+                        <div class="topic">Pittie Group</div>
+                        <div class="des">
+                            Corporate website built for the Pittie Group's logistics division to present its
+                            supply-chain and transportation services. Implemented a responsive layout,
+                            structured service sections, and contact forms, delivered as a production client
+                            site with attention to brand consistency and cross-device performance.
+                        </div>
+                        <div class="buttons">
+                            <button>
+                                <a href="https://pittieconsumer.com" target="_blank" rel="noopener">SEE MORE</a>
                             </button>
                         </div>
                     </div>
@@ -680,250 +778,66 @@
 
                 <!-- Pittie Consumer -->
                 <div class="item">
-                    <img src="image/Pittieconsumer.png">
+                    <img src="image/Pittieconsumer.png" loading="lazy">
                     <div class="content">
                         <div class="author">Umar Ali Shaikh</div>
                         <div class="title">Pittie Consumer</div>
                         <div class="topic">Pittie Group</div>
                         <div class="des">
-                            Pittie Consumer is a fully functional corporate website developed for the Pittie Group to
-                            showcase their diverse FMCG products and growing brand presence. This project focuses on
-                            creating a clean, modern, and professional interface with smooth navigation, responsive
-                            layouts, and well-structured content sections. I implemented dynamic components,
-                            user-friendly forms, and a visually appealing product display to enhance the overall
-                            user experience. This website demonstrates my skills in frontend development, UI/UX design,
-                            and building real-world client projects with attention to detail and brand consistency.
+                            The original corporate website developed for the Pittie Group to showcase its FMCG
+                            product range. Built with a clean, responsive layout and structured content
+                            sections, later evolved into Pittie Consumer V2 as the brand's needs grew.
                         </div>
                         <div class="buttons">
                             <button>
-                                <a href="">SEE MORE</a>
+                                <a href="https://pittieconsumer.com" target="_blank" rel="noopener">SEE MORE</a>
                             </button>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Pittie Consumer V2-->
+                <!-- GTA 6 -->
                 <div class="item">
-                    <img src="image/Pittieconsumerv2.png">
+                    <img src="image/gta6.png" loading="lazy">
                     <div class="content">
                         <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Pittie Consumer V2</div>
-                        <div class="topic">Pittie Group</div>
+                        <div class="title">GTA 6 (React UI Project)</div>
+                        <div class="topic">React.js + GSAP</div>
                         <div class="des">
-                            Pittie Consumer is a fully functional corporate website developed for the Pittie Group to
-                            showcase their diverse FMCG products and growing brand presence. This project focuses on
-                            creating a clean, modern, and professional interface with smooth navigation, responsive
-                            layouts, and well-structured content sections. I implemented dynamic components,
-                            user-friendly forms, and a visually appealing product display to enhance the overall
-                            user experience. This website demonstrates my skills in frontend development, UI/UX design,
-                            and building real-world client projects with attention to detail and brand consistency.
+                            A dynamic, animation-heavy React.js interface inspired by Grand Theft Auto VI,
+                            built to demonstrate cinematic UI design and GSAP-driven motion. Features
+                            interactive menu screens, scroll-based transitions, and a fully responsive layout
+                            true to modern AAA game platforms.
                         </div>
                         <div class="buttons">
                             <button>
-                                <a href="">SEE MORE</a>
+                                <a href="https://gta6alpha.netlify.app/" target="_blank" rel="noopener">
+                                    SEE MORE
+                                </a>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Agency website -->
+                <!-- netflix clone -->
                 <div class="item">
-                    <img src="image/Agenchy.png">
+                    <img src="image/Netflixclone.png" loading="lazy">
                     <div class="content">
                         <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Agency Website</div>
-                        <div class="topic">Oneshot</div>
+                        <div class="title">Netflix Clone</div>
+                        <div class="topic">Personal Practice Project</div>
                         <div class="des">
-                            The Oneshot Agency website is a modern and visually engaging portfolio platform designed
-                            for creative and digital service providers. This project focuses on clean layouts, smooth
-                            animations, and a professional presentation of services, case studies, and team details.
-                            I developed a responsive design that works seamlessly across devices and implemented
-                            interactive UI elements to enhance user engagement. This project highlights my skills in
-                            frontend development, UI/UX design, and building elegant websites tailored for agencies
-                            and professional brands.
+                            A frontend recreation of Netflix's OTT interface, built to sharpen skills in
+                            dynamic sliders, category-based browsing, and responsive layout. A personal
+                            practice project demonstrating UI craftsmanship rather than a production
+                            deployment.
                         </div>
                         <div class="buttons">
                             <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- portfolio v1 -->
-                <div class="item">
-                    <img src="image/Portfoliov1.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Portfolio V1</div>
-                        <div class="topic">Portfolio</div>
-                        <div class="des">
-                            Portfolio V1 is my first personal portfolio design, created to showcase my early work,
-                            creative approach, and growing skills in frontend development. This version focuses on a
-                            clean layout, smooth scrolling effects, and a structured presentation of projects and
-                            services. It was built as a foundation for exploring UI/UX design, animations, and
-                            responsive web development. Portfolio V1 represents the starting point of my journey as a
-                            developer and reflects how my design style and technical abilities have evolved over time.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Gym intro -->
-                <div class="item">
-                    <img src="image/gymintero.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">GYM Website</div>
-                        <div class="topic">Gym Introduction</div>
-                        <div class="des">
-                            The Gym Website is a modern fitness platform designed to introduce gym services, training
-                            programs, and membership plans in a clean and engaging way. This project features energetic
-                            visuals, bold typography, smooth animations, and a fully responsive layout that works
-                            perfectly across devices. I designed user-friendly sections for workouts, trainers, pricing,
-                            and contact details to ensure a seamless browsing experience. This project highlights my
-                            ability to build attractive, high-performance websites tailored for fitness and lifestyle
-                            brands.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- restaurant -->
-                <div class="item">
-                    <img src="image/restaurant.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Restaurant Website</div>
-                        <div class="topic">Foodies</div>
-                        <div class="des">
-                            The Foodies Restaurant Website is a modern and visually rich platform designed to showcase
-                            dishes, menu categories, chef specials, and dining experience in an engaging way. This
-                            project features appetizing visuals, smooth animations, and a fully responsive layout that
-                            enhances the user’s browsing experience. I created clean sections for the menu,
-                            reservations,
-                            about us, and contact details to make the website both attractive and functional. This
-                            project highlights my skills in UI/UX design, frontend development, and creating elegant,
-                            food-themed web interfaces.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- restaurant V2-->
-                <div class="item">
-                    <img src="image/restaurantintro.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Restaurant2 Website</div>
-                        <div class="topic">MR. Royals</div>
-                        <div class="des">
-                            The MR. Royals Restaurant Website is a classy and elegant food platform designed to
-                            highlight
-                            premium dishes, royal ambience, and a fine-dining experience. This project features a rich
-                            color palette, smooth animations, and a fully responsive layout that works beautifully
-                            across
-                            all devices. I created structured sections for the menu, chef specials, reservations, and
-                            customer reviews to offer a complete and engaging user experience. This website showcases my
-                            ability to design luxurious, visually appealing, and user-friendly restaurant interfaces.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- To Do List -->
-                <div class="item">
-                    <img src="image/ToDolist.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">To Do List</div>
-                        <div class="topic">Work List</div>
-                        <div class="des">
-                            The To-Do List is a simple and efficient productivity app designed to help users manage
-                            their daily tasks with ease. This project includes features like adding, editing, and
-                            deleting tasks, along with a clean and minimal user interface. It focuses on smooth
-                            functionality, responsive design, and a user-friendly experience. This project highlights
-                            my ability to build practical, interactive, and well-structured web applications.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- weather -->
-                <div class="item">
-                    <img src="image/Whether.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Weather Website</div>
-                        <div class="topic">Today's Weather</div>
-                        <div class="des">
-                            The Weather Website is a live weather forecasting platform that provides real-time
-                            temperature,
-                            humidity, wind details, and overall climate conditions for any location. It features a clean
-                            and
-                            modern interface with smooth animations and a fully responsive design. Using API-powered
-                            data
-                            fetching, this project highlights my skills in JavaScript, API integration, and creating
-                            dynamic,
-                            user-friendly web applications.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Pittie Logistics -->
-                <div class="item">
-                    <img src="image/Pittielogistics.png">
-                    <div class="content">
-                        <div class="author">Umar Ali Shaikh</div>
-                        <div class="title">Pittie Logistics</div>
-                        <div class="topic">Pittie Group</div>
-                        <div class="des">
-                            Pittie Logistics is a fully functional corporate website designed to showcase the logistics
-                            operations, supply-chain solutions, and transportation services offered by the Pittie Group.
-                            This project focuses on a clean and professional interface, smooth navigation, and a
-                            responsive
-                            layout that works seamlessly across all devices. I implemented well-structured service
-                            sections,
-                            contact forms, and informational pages to provide a clear and user-friendly experience. This
-                            project reflects my strong frontend development skills and my ability to deliver real-world
-                            business websites with attention to detail and brand consistency.
-                        </div>
-                        <div class="buttons">
-                            <button>
-                                <a href="">SEE MORE</a>
+                                <a href="">
+                                    SEE MORE
+                                </a>
                             </button>
                         </div>
                     </div>
@@ -933,7 +847,7 @@
             <!-- list thumnail -->
             <div class="thumbnail">
                 <div class="item">
-                    <img src="image/Netflixclone.png">
+                    <img src="image/hire-pilot.webp" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -944,7 +858,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/gta6.png">
+                    <img src="image/smart-restaurant.webp" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -955,7 +869,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/Pittieconsumer.png">
+                    <img src="image/Pittieconsumerv2.png" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -966,7 +880,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/Pittieconsumerv2.png">
+                    <img src="image/Pittielogistics.png" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -977,7 +891,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/Agenchy.png">
+                    <img src="image/Pittieconsumer.png" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -988,7 +902,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/Portfoliov1.png">
+                    <img src="image/gta6.png" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -999,62 +913,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/gymintero.png">
-                    <div class="content">
-                        <div class="title">
-                            Name Slider
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/restaurant.png">
-                    <div class="content">
-                        <div class="title">
-                            Name Slider
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/restaurantintro.png">
-                    <div class="content">
-                        <div class="title">
-                            Name Slider
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/ToDolist.png">
-                    <div class="content">
-                        <div class="title">
-                            Name Slider
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/Whether.png">
-                    <div class="content">
-                        <div class="title">
-                            Name Slider
-                        </div>
-                        <div class="description">
-                            Description
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="image/Pittielogistics.png">
+                    <img src="image/Netflixclone.png" loading="lazy">
                     <div class="content">
                         <div class="title">
                             Name Slider
@@ -1068,8 +927,8 @@
             <!-- next prev -->
 
             <div class="arrows">
-                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                <button id="prev" type="button" aria-label="Previous project"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="next" type="button" aria-label="Next project"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <!-- time running -->
             <div class="time"></div>
@@ -1089,11 +948,12 @@
             <div role="list" class="list">
                 <div role="listitem" class="item">
                     <div class="item_content">
-                        <h1>Umarali Shaikh –<span class="portfolio-redcolor"> Web Developer</span>, based in India.</h1>
+                        <h2>Umar Ali Shaikh –<span class="portfolio-redcolor"> Full Stack MERN & AI Developer</span>,
+                            based in India.</h2>
                         <p class="intro">
-                            I craft web experiences that are not only visually appealing but also intuitive and
-                            functional. My focus is on building responsive, interactive, and user-friendly applications
-                            that engage users and deliver real value.
+                            I build scalable web applications with MongoDB, Express.js, React.js, and Node.js —
+                            covering secure authentication, RESTful APIs, cloud deployment, and AI-powered
+                            features using Generative AI, RAG, and n8n workflow automation.
                         </p>
 
                         <div class="info">
@@ -1115,20 +975,25 @@
                             </div>
                             <div class="info-hlp">
                                 <div class="label">Experience</div>
-                                <div class="info-label">1.5 years</div>
+                                <div class="info-label">2+ years</div>
                             </div>
                             <div class="info-hlp">
                                 <div class="label">Freelance</div>
                                 <div class="info-label">Available</div>
                             </div>
                             <div class="info-hlp">
-                                <div class="label">Skype</div>
-                                <div class="info-label">umarali.skype</div>
+                                <div class="label">GitHub</div>
+                                <div class="info-label">github.com/umar-ali-shaikh</div>
                             </div>
                             <div class="info-hlp">
                                 <div class="label">Language</div>
-                                <div class="info-label">Hindi, English</div>
+                                <div class="info-label">English, Hindi, Marathi, Urdu</div>
                             </div>
+                        </div>
+
+                        <div class="hero-section-content-btn">
+                            <a href="assets/Umar-Ali-Shaikh-Resume.pdf" download="Umar-Ali-Shaikh-Resume.pdf"
+                                class="btn btn-primary">Download Resume</a>
                         </div>
                     </div>
                 </div>
@@ -1139,35 +1004,38 @@
                         <div class="my-resume-section-job my-resume-section-job1">
                             <div class="meta">
                                 <div id="jd1" class="title">Web Developer —<span class="portfolio-redcolor"> Right
-                                        Door</span></div>
+                                        Door</span>, Dubai</div>
                                 <div class="date">2024 – 2025</div>
                             </div>
                             <div class="desc">
                                 <ul>
-                                    <li>Contributed to designing user-centered digital experiences, focusing on
-                                        clean interfaces and intuitive user journeys.</li>
-                                    <li>Collaborated with developers and product teams to translate design concepts
-                                        into functional products.</li>
-                                    <li>Improved product usability through iterative prototyping, testing, and
-                                        design refinements.</li>
+                                    <li>Developed 2 client-based WordPress websites with fully responsive layouts
+                                        using HTML, CSS, JavaScript, and WordPress.</li>
+                                    <li>Created custom themes and optimized performance & SEO to improve website
+                                        speed and visibility.</li>
+                                    <li>Collaborated with the agency team on live projects, handling client
+                                        revisions, UI updates, and deployments.</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="my-resume-section-job my-resume-section-job1">
                             <div class="meta">
-                                <div id="jd2" class="title">Web Developer — <span class="portfolio-redcolor">Pittie
-                                        Group</span></div>
+                                <div id="jd2" class="title">Junior Web Developer — <span
+                                        class="portfolio-redcolor">Pittie
+                                        Group</span>, Mumbai</div>
                                 <div class="date">2025 – Present</div>
                             </div>
                             <div class="desc">
                                 <ul>
-                                    <li>Leading design initiatives for digital and brand projects across the Pittie
-                                        Group.</li>
-                                    <li>Working closely with cross-functional teams to define design strategy and
-                                        maintain consistency across platforms.</li>
-                                    <li>Implementing creative solutions that align with company goals for innovation
-                                        and
-                                        customer engagement.</li>
+                                    <li>Developed and maintained 8+ responsive websites using HTML, CSS,
+                                        JavaScript, React.js, WordPress, Bootstrap, and PHP, ensuring cross-device
+                                        compatibility.</li>
+                                    <li>Built and maintained custom WordPress websites, resulting in a 35% increase
+                                        in user engagement.</li>
+                                    <li>Optimized SEO and performance, reducing page load time by 40% and
+                                        increasing organic traffic by 30%.</li>
+                                    <li>Delivered 10+ pixel-perfect UI implementations from Figma designs and
+                                        improved website stability by reducing UI issues by 25%.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1183,7 +1051,7 @@
                                 <div class="date">2021 – 2022</div>
                             </div>
                             <div class="meta-field">
-                                <span>HSC</span>
+                                <span>SSC</span>
                             </div>
                         </div>
                         <div class="my-resume-section-education">
@@ -1192,7 +1060,7 @@
                                 <div class="date">2023 – 2024</div>
                             </div>
                             <div class="meta-field">
-                                <span>SSC</span>
+                                <span>HSC, Commerce</span>
                             </div>
                         </div>
                     </div>
@@ -1216,7 +1084,7 @@
                             <div class="skills-container">
 
                                 <div class="skill-item">
-                                    <img src="image/javascript-736400.svg" alt="JavaScript icon" class="skill-icon">
+                                    <img src="image/javascript-736400.svg" alt="JavaScript icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">JavaScript</h4>
                                         <p class="skill-level">90%</p>
@@ -1224,7 +1092,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/react-js-icon.svg" alt="React JS icon" class="skill-icon">
+                                    <img src="image/react-js-icon.svg" alt="React JS icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">React JS</h4>
                                         <p class="skill-level">90%</p>
@@ -1232,7 +1100,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/icon1.png" alt="Figma icon" class="skill-icon">
+                                    <img src="image/icon1.png" alt="Figma icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">Figma</h4>
                                         <p class="skill-level">70%</p>
@@ -1240,7 +1108,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/html.png" alt="html icon" class="skill-icon">
+                                    <img src="image/html.png" alt="html icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">HTML</h4>
                                         <p class="skill-level">80%</p>
@@ -1248,7 +1116,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/CSS-Icon.svg" alt="css icon" class="skill-icon">
+                                    <img src="image/CSS-Icon.svg" alt="css icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">CSS</h4>
                                         <p class="skill-level">80%</p>
@@ -1256,7 +1124,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/Gsap.svg" alt="gsap icon" class="skill-icon">
+                                    <img src="image/Gsap.svg" alt="gsap icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">GSAP</h4>
                                         <p class="skill-level">85%</p>
@@ -1264,7 +1132,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/Boostrap.svg" alt="Boostrap icon" class="skill-icon">
+                                    <img src="image/Boostrap.svg" alt="Boostrap icon" class="skill-icon" loading="lazy">
 
                                     <div class="skill-content">
                                         <h4 class="skill-name">Boostrap</h4>
@@ -1273,7 +1141,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/wordpress.png" alt="wordpress icon" class="skill-icon">
+                                    <img src="image/wordpress.png" alt="wordpress icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">Wordpress</h4>
                                         <p class="skill-level">85%</p>
@@ -1306,7 +1174,7 @@
                                 </div>
 
                                 <div class="skill-item">
-                                    <img src="image/uiux.png" alt="UI/UX icon" class="skill-icon">
+                                    <img src="image/uiux.png" alt="UI/UX icon" class="skill-icon" loading="lazy">
                                     <div class="skill-content">
                                         <h4 class="skill-name">UI/UX Design</h4>
                                         <p class="skill-level">85%</p>
@@ -1346,7 +1214,7 @@
                         </div>
                         <div class="freelance-row-box-content-time d-flex align-items-center justify-content-between">
                             <div class="freelance-row-box-content-time-hlp">
-                                <h2>20hrs</h2>
+                                <h4 class="pricing-hours">20hrs</h4>
                                 <h3>10 hours per week</h3>
                             </div>
                             <span>
@@ -1369,7 +1237,7 @@
                         </div>
                         <div class="freelance-row-box-content-time d-flex align-items-center justify-content-between">
                             <div class="freelance-row-box-content-time-hlp">
-                                <h2>30hrs</h2>
+                                <h4 class="pricing-hours">30hrs</h4>
                                 <h3>15 hours per week</h3>
                             </div>
                             <span>
@@ -1392,7 +1260,7 @@
                         </div>
                         <div class="freelance-row-box-content-time d-flex align-items-center justify-content-between">
                             <div class="freelance-row-box-content-time-hlp">
-                                <h2>20hrs</h2>
+                                <h4 class="pricing-hours">20hrs</h4>
                                 <h3>80 hours per week</h3>
                             </div>
                             <span>
@@ -1422,164 +1290,164 @@
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <!-- Duplicate set -->
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper animated-skills-wrapper-stroke">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
                 <div class="animated-skills-wrapper">
                     <div class="animated-skills-wrapper-item">
-                        <h3>
+                        <p class="marquee-text">
                             <span>Get In Touch</span>
-                            <span><img src="image/star.png" alt="portfolio star"></span>
-                        </h3>
+                            <span><img src="image/star.png" alt="portfolio star" loading="lazy"></span>
+                        </p>
                     </div>
                 </div>
 
@@ -1748,7 +1616,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-white footer-social-link">
+                                        <a href="https://www.linkedin.com/in/umar-ali-shaikh-53172a281/" target="_blank"
+                                            rel="noopener" class="text-white footer-social-link">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1768,7 +1637,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-white footer-social-link">
+                                        <a href="https://github.com/umar-ali-shaikh" target="_blank" rel="noopener"
+                                            class="text-white footer-social-link">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -1783,11 +1653,11 @@
                         </div>
                     </div>
                     <div class="footer-social-contact d-flex
-                    justify-content-between gap-3">
+                        justify-content-between gap-3">
                         <div class="footer-social-contact-hlp">
-                            <h3>Looking for a hectic designer?</h3>
+                            <h3>Looking for a full stack developer?</h3>
                             <span class="d-flex flex-column justify-content-between">
-                                <a href="#">
+                                <a href="mailto:umarali4430@gmail.com">
                                     Umarali4430@gmail.com
                                 </a>
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -1802,7 +1672,7 @@
                         <div class="footer-social-contact-hlp">
                             <h3>Want a more in-depth look at my history?</h3>
                             <span class="d-flex justify-content-between flex-column">
-                                <a href="#">
+                                <a href="tel:+919833075638">
                                     +91 9833075638
                                 </a>
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -1822,9 +1692,9 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between footer-top-arrow">
-                    <div class="d-flex align-items-center">©2025 <span class="portfolio-redcolor">Umar Ali Shaikh
+                    <div class="d-flex align-items-center">©2026 <span class="portfolio-redcolor">Umar Ali Shaikh
                             ,</span> All Rights Reserved</div>
-                    <div class="d-flex gap-3 align-items-center footer-top-arrow-hlp">
+                    <button type="button" class="d-flex gap-3 align-items-center footer-top-arrow-hlp">
                         Back to Top
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path class="transition-all" d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.6"
@@ -1832,22 +1702,17 @@
                             <path class="transition-all" d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.6"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <div class="circle-blur"><img src="image/Footer-background.png" alt=""></div>
+        <div class="circle-blur"><img src="image/Footer-background.png" alt="" loading="lazy"></div>
     </footer>
 
 
 
 
-
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js" defer></script>
 
 
     <!-- Gsap -->
@@ -1858,9 +1723,8 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
 
-    <!-- Your Main JS -->
-    <!-- <script src="script.js"></script> -->
-    <script src="script2.js"></script>
+    <!-- Main JS (ES modules — see /js/main.js) -->
+    <script type="module" src="js/main.js"></script>
 
 
 

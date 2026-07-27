@@ -106,7 +106,7 @@ img {
 
     .container {
         width: 100%;
-        max-width: 1250px;
+        max-width: 1150px;
         margin: auto;
         padding: 0;
     }
@@ -360,6 +360,8 @@ img {
 .hero-section {
     height: 100vh;
     max-height: 650px;
+    max-width: 1250px;
+    margin: auto;
     position: relative;
     background-image: url(./image/herosection.png);
     /* background-position: center right; */
@@ -392,6 +394,8 @@ img {
 
 .hero-section-content-box {
     display: flex;
+    width: 100%;
+    margin-top: 100px;
     justify-content: space-between;
 }
 
@@ -415,15 +419,19 @@ img {
     margin-bottom: 50px;
 }
 
-.hero-section-content-btn button {
+.hero-section-content-btn button,
+.hero-section-content-btn .btn {
     background-color: transparent;
     border: 1px solid var(--text1-color);
     padding: 10px 50px;
     border-radius: 15px;
+    color: var(--text1-color);
+    display: inline-block;
     transition: transform 0.3s ease-in, background-color 0.3s ease, color 0.1s ease;
 }
 
-.hero-section-content-btn button:hover {
+.hero-section-content-btn button:hover,
+.hero-section-content-btn .btn:hover {
     background-color: var(--text1-color);
     color: var(--text3-color);
     border: 1px solid var(--text1-color);
@@ -530,16 +538,19 @@ img {
     width: 100%;
 }
 
-.animated-skills .animated-skills-wrapper-item h3 {
+.animated-skills .animated-skills-wrapper-item .marquee-text {
     display: flex;
     align-items: center;
     gap: 50px;
     justify-content: space-between;
     width: 100%;
     font-size: 58px;
+    font-weight: 600;
+    color: var(--text1-color);
+    margin: 0;
 }
 
-.animated-skills .animated-skills-wrapper-item h3 img {
+.animated-skills .animated-skills-wrapper-item .marquee-text img {
     width: 60px;
 }
 
@@ -1112,11 +1123,11 @@ img {
     right: 0;
 }
 
-/* Pin-Spacer ko bilkul touch nahi karna */
+/* GSAP generates this element itself and sizes it to the pinned content
+   (see js/modules/resumeScroll.js) — only reset box-model here, never height. */
 .pin-spacer {
     padding: 0 !important;
     margin: 0 auto !important;
-    min-height: calc(600px * 4 + 50px * 3 + 100px);
 }
 
 /* List container (stacked cards) */
@@ -1360,7 +1371,9 @@ img {
     color: rgba(8, 8, 8, 0.6);
 }
 
-.freelance-section .freelance-row-box-section h2 {
+.freelance-section .freelance-row-box-section .pricing-hours {
+    font-size: clamp(24px, 5vw, 38px);
+    font-weight: 600;
     color: var(--text3-color);
     margin-top: 20px;
     font-family: "Syne", sans-serif;
@@ -1514,7 +1527,7 @@ img {
     margin: auto;
     transform-style: preserve-3d;
     transform: rotateX(180deg);
-    transition: transform 0.7s ease;
+    transition: transform 0.4s ease;
 }
 
 .footer-section.active::after {
@@ -1528,7 +1541,7 @@ img {
 .footer-section .container {
     transform-style: preserve-3d;
     transform: rotateX(180deg);
-    transition: transform 0.7s ease;
+    transition: transform 0.4s ease;
     position: relative;
     z-index: 11;
 }
@@ -1661,6 +1674,16 @@ img {
     cursor: pointer;
 }
 
+/* Reset native <button> chrome so it renders identically to the previous <div> */
+button.footer-top-arrow-hlp {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
 .footer-top-arrow svg {
     transform: rotate(-45deg);
     width: 30px;
@@ -1725,10 +1748,15 @@ img {
 
 
 /* XXXL */
-@media (min-width: 1400px) {}
+@media (min-width: 1450px) {
 
-/* XXL */
-@media (min-width: 1200px) and (max-width: 1400px) {}
+    .hero-section .animated-skills-hlp,
+    .my-project-section {
+        max-width: 1150px;
+        margin: auto;
+    }
+
+}
 
 /* XL */
 @media (min-width: 1050px) and (max-width: 1200px) {
@@ -1854,10 +1882,15 @@ img {
     }
 
     .navbar-toggler:focus,
-    .navbar-toggler:active,
-    .navbar-toggler:focus-visible {
+    .navbar-toggler:active {
         outline: none !important;
         box-shadow: none !important;
+    }
+
+    .navbar-toggler:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 0 3px var(--text2-color) !important;
+        border-radius: 4px;
     }
 
     .navbar-expand-lg .navbar-collapse-mobile .navbar-nav .nav-item {
@@ -1876,6 +1909,7 @@ img {
 
     .hero-section-content-box {
         flex-direction: column;
+        margin-top: 50px;
     }
 
     .aboutus-section .hero-section-content-box {
@@ -2072,10 +2106,6 @@ img {
 
     .skill-name {
         font-size: 14px;
-    }
-
-    .pin-spacer {
-        min-height: calc(600px * 4 + 50px * 4 + 100px);
     }
 
     .skill-item {
