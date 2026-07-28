@@ -131,6 +131,7 @@ img {
     background-color: var(--text1-color);
     width: 10px;
     height: 10px;
+    position: fixed;
     border-radius: 50px;
     z-index: 1111111111;
 }
@@ -800,6 +801,12 @@ img {
     height: 220px;
     flex-shrink: 0;
     position: relative;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.thumbnail .item:hover {
+    transform: translateY(-6px);
 }
 
 .thumbnail .item img {
@@ -1241,59 +1248,265 @@ img {
     font-size: 16px;
 }
 
-/* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+/* ==============================
+   Skills Section
+============================== */
+
+/* Sprite sheet holding shared <symbol> icons — never rendered directly. */
+.skills-sprite {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
 }
 
-.skill-item {
-    display: flex;
-    align-items: center;
-    border-radius: 12px;
-    padding: 1rem 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    flex: 0 0 calc(100% / 3 - 13.3333333333px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* The Skills card scrolls internally so its content is never clipped by the
+   pinned card's fixed height (see .my-resume-section .item, 600px !important). */
 .skills-section-hlp .item_content {
     width: 100% !important;
-    display: flex;
-    justify-content: center;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.skill-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    margin-right: 1rem;
-}
-
-.skill-content {
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 6px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(253, 91, 56, 0.5) transparent;
 }
 
-.skill-name {
+.skills-section-hlp .item_content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skills-section-hlp .item_content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.skills-section-hlp .item_content::-webkit-scrollbar-thumb {
+    background: rgba(253, 91, 56, 0.4);
+    border-radius: 10px;
+}
+
+.skills-section-hlp .item_content::-webkit-scrollbar-thumb:hover {
+    background: rgba(253, 91, 56, 0.7);
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+.skills-head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills-subtitle {
+    max-width: 640px;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    color: #b9b9b9 !important;
+}
+
+.skills-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "frontend frontend"
+        "backend  tools"
+        "ai       ai";
+    gap: 14px;
+}
+
+.skills-group--frontend {
+    grid-area: frontend;
+}
+
+.skills-group--backend {
+    grid-area: backend;
+}
+
+.skills-group--tools {
+    grid-area: tools;
+}
+
+.skills-group--ai {
+    grid-area: ai;
+}
+
+.skills-group {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px 18px;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.skills-group:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.skills-group--ai {
+    background: linear-gradient(160deg, rgba(253, 91, 56, 0.09), rgba(253, 91, 56, 0.015));
+    border-color: rgba(253, 91, 56, 0.25);
+}
+
+.skills-group--ai:hover {
+    border-color: rgba(253, 91, 56, 0.45);
+}
+
+.skills-group-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.skills-group-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex: none;
+    border-radius: 8px;
+    background: rgba(253, 91, 56, 0.12);
+    color: var(--text2-color);
+}
+
+.skills-group-icon .chip-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.skills-group-title {
     font-family: 'Syne', sans-serif;
+    font-size: 0.98rem;
     font-weight: 700;
-    /* font-size: 1.2rem; */
+    letter-spacing: 0.2px;
     color: var(--text1-color);
+    margin: 0;
 }
 
-.skill-level {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: #555;
+.skills-group-count {
+    margin-left: auto;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #8a8a8a;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 2px 9px;
+    border-radius: 20px;
+}
+
+.skills-focus-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    color: var(--text2-color);
+    background: rgba(253, 91, 56, 0.1);
+    border: 1px solid rgba(253, 91, 56, 0.3);
+    padding: 3px 10px 3px 8px;
+    border-radius: 20px;
+}
+
+.skills-focus-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text2-color);
+    box-shadow: 0 0 0 rgba(253, 91, 56, 0.6);
+    animation: skillsPulse 2s ease-out infinite;
+}
+
+@keyframes skillsPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(253, 91, 56, 0.55);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(253, 91, 56, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(253, 91, 56, 0);
+    }
+}
+
+.skills-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    color: #d8d8d8;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.skill-chip:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.skill-chip.is-core {
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(253, 91, 56, 0.16), rgba(253, 91, 56, 0.04));
+    border-color: rgba(253, 91, 56, 0.5);
+    box-shadow: 0 6px 16px -10px rgba(253, 91, 56, 0.7);
+}
+
+.skill-chip.is-core:hover {
+    border-color: rgba(253, 91, 56, 0.85);
+    background: linear-gradient(135deg, rgba(253, 91, 56, 0.26), rgba(253, 91, 56, 0.06));
+}
+
+.chip-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-chip,
+    .skills-group {
+        transition: none;
+    }
+
+    .skill-chip:hover {
+        transform: none;
+    }
+
+    .skills-focus-dot {
+        animation: none;
+    }
 }
 
 /* ==============================
@@ -1315,6 +1528,15 @@ img {
     .my-resume-section .item_content h1,
     .my-resume-section .item_content h2 {
         font-size: 1.5rem;
+    }
+
+    .skills-groups {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "frontend"
+            "backend"
+            "ai"
+            "tools";
     }
 
     .my-resume-section .item_content p {
@@ -2098,29 +2320,36 @@ button.footer-top-arrow-hlp {
         padding: 10px;
     }
 
-    .skill-icon {
-        width: 30px;
-        height: 30px;
-        margin: 0;
+    .skills-group {
+        padding: 14px;
     }
 
-    .skill-name {
-        font-size: 14px;
+    .skill-chip {
+        padding: 6px 10px;
+        font-size: 0.78rem;
     }
 
-    .skill-item {
-        flex-direction: column;
-        gap: 20px;
+    .chip-icon {
+        width: 15px;
+        height: 15px;
     }
 
     .my-resume-section .item_content p {
         text-align: center;
     }
+
+    .skills-subtitle {
+        text-align: left !important;
+    }
 }
 
 /* XS */
 @media (max-width: 480px) {
-    .skill-item {
-        flex: 0 0 calc(100% / 2 - 10px);
+    .skills-group-head {
+        gap: 8px;
+    }
+
+    .skills-group-count {
+        margin-left: 0;
     }
 }
