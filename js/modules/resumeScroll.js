@@ -99,6 +99,8 @@ export function initResumeScroll() {
     const resumeSection = document.querySelector('.my-resume-section .scroll-section');
     if (!resumeSection) return;
 
+    gsap.registerPlugin(ScrollTrigger);
+
     const wrapper = resumeSection.querySelector('.list');
     const cards = [...wrapper.querySelectorAll('.item')];
     if (!cards.length) return;

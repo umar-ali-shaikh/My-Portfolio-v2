@@ -24,9 +24,12 @@ body {
     position: relative;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+/* Deliberately no `scroll-behavior: smooth` here — it fights GSAP
+   ScrollTrigger's per-frame scroll-position sampling (native smooth-scroll
+   interpolation vs. ScrollTrigger's own RAF reads), which is what caused the
+   Resume section's stutter/jitter. No in-page anchor links rely on it; the
+   footer "back to top" button already passes behavior: 'smooth' to its own
+   scrollTo() call in js/main.js, which is unaffected by this property. */
 
 /* ===================== Responsive Typography ===================== */
 h1 {
@@ -1164,6 +1167,7 @@ img {
     overflow: hidden;
     z-index: 1;
     transform-origin: center center;
+    will-change: transform;
 }
 
 .my-resume-section .item.active {
