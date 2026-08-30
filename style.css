@@ -1324,7 +1324,8 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "frontend frontend"
-        "backend  tools"
+        "backend  backend"
+        "database tools"
         "ai       ai";
     gap: 14px;
 }
@@ -1335,6 +1336,10 @@ img {
 
 .skills-group--backend {
     grid-area: backend;
+}
+
+.skills-group--database {
+    grid-area: database;
 }
 
 .skills-group--tools {
@@ -1539,8 +1544,9 @@ img {
         grid-template-areas:
             "frontend"
             "backend"
-            "ai"
-            "tools";
+            "database"
+            "tools"
+            "ai";
     }
 
     .my-resume-section .item_content p {
